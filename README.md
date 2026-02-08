@@ -1,26 +1,57 @@
-Assignment : 
+# Please use below command to run the code: 
+python main.py 
 
-Create a Payment Processing System for a store and follow OOP.
 
-- The system should enable store to add cash(online) in their system using CreditCard or UPI
+**💳 Payment Processing System**
 
-- The system should also have functionality to refund to customers
+A modern, Object-Oriented Payment Processing System built with Python. This project demonstrates clean code principles, modular architecture, and the use of high-performance Python tooling.
 
-- The system should have functionality to show balance
+**🚀 Features**
+Modern Environment Management: Built using uv for lightning-fast dependency resolution and project isolation.
 
-- The system should have functionality to check history
+OOPS Architecture: Implements Object-Oriented Programming for scalable and maintainable transaction handling.
 
-Terminal : uv run python main.py
-Welcome to Payment system:
-Press 1 for Add cash to the system
-Press 2 to refund the money
-Press 3 check balance
-Press 4 to check the transcation
-Press 5 to exit the system
+Structural Pattern Matching: Uses Python’s match keyword for elegant routing of different payment methods (UPI, Card, Refunds).
 
-if user press 1 : Want to use credit card or UPI : 1 of C, 2 UPI
-if user press 2 : enter amount to refund : subtract the amount from system credit
-if user press 3 :
-if user press 4 : show the history but with good format in terminal
+Professional Formatting: Advanced use of f-strings to generate clean, aligned transaction histories.
 
-The code should be robust, running in while loop, should handle user input and type casting, should have exception handling + All OOPS concept + modules & package creation is (optional)
+Time-Stamped Logging: Integrated time module for real-world transaction simulation.
+
+**🛠️ Technical Stack**
+Language: Python 3.10+
+
+**Package Manager:**
+
+**Key Modules:** time, re, dataclasses
+
+**📥 Installation & Setup**
+Ensure you have uv installed. If not, you can install it via:
+
+1. Clone the repository
+2. Sync the environment
+3. Run the application
+📖 Key Concepts Covered
+1. Structural Pattern Matching
+We use the match statement to handle various transaction types efficiently:
+
+2. Modular Structure
+The project is split into packages and modules to keep the logic separated:
+
+**core:** Contains the base OOPS logic.
+
+**utils:** Contains formatting and helper functions.
+
+**Sample Output:**
+
+Use 1 --> Add, 2 --> refund, 3 --> check balance, 4 --> check history, 5 --> quit
+
+------------------------------------------------------------------------
+| TXN ID                 | TYPE       | METHOD   |   AMOUNT |  BALANCE |
+------------------------------------------------------------------------
+| 1770565635.6909955     | CREDIT     | UPI      | +   1000 |     1000 |
+| 1770565645.0274868     | CREDIT     | CARD     | +   2000 |     3000 |
+| 1770565654.1928244     | REFUND     | N/A      | ↺    600 |     2400 |
+| 1770565667.330947      | CREDIT     | CARD     | +   1237 |     5637 |
+| 1770565676.8719413     | CREDIT     | UPI      | +   2000 |     8637 |
+| 1770565688.4877427     | REFUND     | N/A      | ↺   2300 |     6337 |
+------------------------------------------------------------------------
