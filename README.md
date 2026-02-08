@@ -1,4 +1,5 @@
-**Please use below command to run the code:**
+**Use below command to run the code:**
+
 python main.py 
 
 
