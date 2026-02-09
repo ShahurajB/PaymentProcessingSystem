@@ -1,7 +1,8 @@
 
 from config import logger
+from abstract_system import Payment
 
-class PaymentByUPI:
+class PaymentByUPI(Payment):
     def __init__(self):
         self.__amount = 0
     

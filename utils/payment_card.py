@@ -1,7 +1,8 @@
 
 from config import logger
+from abstract_system import Payment
 
-class PaymentByCard:
+class PaymentByCard(Payment):
     def __init__(self):
         self.__amount = 0
     
