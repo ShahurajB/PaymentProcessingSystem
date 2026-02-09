@@ -1,0 +1,18 @@
+2026-02-09 07:31:21 - PaymentSystem - INFO - Welcome to Payment System
+2026-02-09 07:31:21 - PaymentSystem - INFO - Use 1 --> Add, 2 --> refund, 3 --> check balance, 4 --> check history, 5 --> quit)
+2026-02-09 07:31:33 - PaymentSystem - INFO - Depositing money by UPI: 1234
+2026-02-09 07:31:33 - PaymentSystem - INFO - Use 1 --> Add, 2 --> refund, 3 --> check balance, 4 --> check history, 5 --> quit)
+2026-02-09 07:31:50 - PaymentSystem - INFO - Depositing money by credit card: 2345
+2026-02-09 07:31:50 - PaymentSystem - INFO - Use 1 --> Add, 2 --> refund, 3 --> check balance, 4 --> check history, 5 --> quit)
+2026-02-09 07:32:09 - PaymentSystem - INFO - Refund amount: 2578
+2026-02-09 07:32:09 - PaymentSystem - INFO - Refund successful. New balance: 1001
+2026-02-09 07:32:09 - PaymentSystem - INFO - Use 1 --> Add, 2 --> refund, 3 --> check balance, 4 --> check history, 5 --> quit)
+2026-02-09 07:32:21 - PaymentSystem - INFO - ------------------------------------------------------------------------
+2026-02-09 07:32:21 - PaymentSystem - INFO - | TXN ID                 | TYPE       | METHOD   |   AMOUNT |  BALANCE |
+2026-02-09 07:32:21 - PaymentSystem - INFO - ------------------------------------------------------------------------
+2026-02-09 07:32:21 - PaymentSystem - INFO - | 1770622293.6049807     | CREDIT     | UPI      | +   1234 |     1234 |
+2026-02-09 07:32:21 - PaymentSystem - INFO - | 1770622310.1375175     | CREDIT     | CARD     | +   2345 |     3579 |
+2026-02-09 07:32:21 - PaymentSystem - INFO - | 1770622329.5423398     | REFUND     | N/A      | ↺   2578 |     1001 |
+2026-02-09 07:32:21 - PaymentSystem - INFO - ------------------------------------------------------------------------
+2026-02-09 07:32:21 - PaymentSystem - INFO - Use 1 --> Add, 2 --> refund, 3 --> check balance, 4 --> check history, 5 --> quit)
+2026-02-09 07:32:30 - PaymentSystem - INFO - Exiting...

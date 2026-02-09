@@ -1,4 +1,5 @@
 from utils import *
+from config import logger
 import time
 import re
 
@@ -24,25 +25,26 @@ class PaymentSystem:
             t1 = time.time()
             self.__history.append(f'Transaction_{t1}: credited amount by upi: {amount} balance: {self.__amount}')
         else:
-            print("Please provide correct type of payment")
+            logger.error("Please provide correct type of payment")
 
     
     def refund(self, refund_amount):
-        print(f"refund money: {refund_amount}")
+        logger.info(f"Refund amount: {refund_amount}")
         if refund_amount <= self.__amount:
             self.__amount -= refund_amount
             t1 = time.time()
             self.__history.append(f'Transaction_{t1}: refund amount: {refund_amount} balance: {self.__amount}')
+            logger.info(f"Refund successful. New balance: {self.__amount}")
         else:
-            print("Insuffient balance in account: balance is: {self.__amount}")
+            logger.warning(f"Insufficient balance in account: balance is {self.__amount}")
 
     def show_balanace(self):
-        print(f"Your balance is: {self.__amount}")
+        logger.info(f"Current balance: {self.__amount}")
 
     def check_history(self):
-        print("-" * 72)
-        print(f"| {'TXN ID':<22} | {'TYPE':<10} | {'METHOD':<8} | {'AMOUNT':>8} | {'BALANCE':>8} |")
-        print("-" * 72)
+        logger.info("-" * 72)
+        logger.info(f"| {'TXN ID':<22} | {'TYPE':<10} | {'METHOD':<8} | {'AMOUNT':>8} | {'BALANCE':>8} |")
+        logger.info("-" * 72)
 
         for transactions in self.__history:
             pattern = r"Transaction_(.*?): (.*?) amount(?: by (.*?))?: (\d+) balance: (\d+)"
@@ -64,6 +66,6 @@ class PaymentSystem:
                         display_action = "REFUND"
                         prefix = "↺"
 
-                print(f"| {txn_id:<22} | {display_action:<10} | {method.upper():<8} | {prefix}{amount:>7} | {balance:>8} |")
+                logger.info(f"| {txn_id:<22} | {display_action:<10} | {method.upper():<8} | {prefix}{amount:>7} | {balance:>8} |")
             
-        print("-" * 72)
+        logger.info("-" * 72)
