@@ -1,5 +1,6 @@
 # import keyboard
 from payment_system import *
+import sys
 
 
 def main():
@@ -20,6 +21,7 @@ def main():
             case_value = int(input("Select the options: "))
         except Exception as e:
             print(f"Please Select the options correct option : {e}")
+            sys.exit(0)
 
         try:
             match case_value:
